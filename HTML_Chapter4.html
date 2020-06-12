@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tags Learning</title>
+</head>
+<body>
+    <div>First Table to learn tr and td</div>
+    <!-- border is to show a frame of the table -->
+    <table border="2" width="300" height="200">
+        <!-- <caption> is the title of the table -->
+        <caption>This is a HTML table</caption>
+        <!-- use <colgroup> and <col> to define some attributes of columns -->
+        <colgroup>
+            <col bgcolor="red"> <!-- first column -->
+            <col bgcolor="green"> <!-- second column -->
+            <col bgcolor="blue">
+        </colgroup>
+        <!-- <thead> <tbody> <tfoot> can spite a table, just make it claer to see, no actual meaning -->
+        <thead>
+            <!-- <tr> is short for table row, <td> is short for table data -->
+            <tr>
+                <!-- use <th> to show the header of the column or row -->
+                <th>game name</th>
+                <th>date</th>
+                <th>company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- use td*3 can produce 3 <td> in VS Code -->
+                <td>GTA5</td>
+                <td>2015</td>
+                <td>R Star</td>
+            </tr>
+            <tr>
+                <td>Animal Crossing</td>
+                <td>2020</td>
+                <td>Nintendo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>Second Table to learn more attributes of table</div>
+    <!-- cellspacing is to control the distance between two cells -->
+    <!-- cellpadding is to control the distance within one cell -->
+    <!-- align can be used at <table>, <tr> or <td> -->
+    <table border="2" cellspacing="0" cellpadding="10" align="center">
+        <caption>Second Table with more attributes</caption>
+        <!-- span attribute is used to define how many columns will be controlled -->
+        <colgroup span="3" width="150">
+        </colgroup>
+        <!-- colspan and rowspan can combine several cells -->
+        <tr align="center">
+            <td colspan="2">1-1</td>
+            <!-- <td>1-2</td> -->
+            <td>1-3</td>
+            <td>1-4</td>
+        </tr>
+        <tr>
+            <td>2-1</td>
+            <td>2-2</td>
+            <td>2-3</td>
+            <td>2-4</td>
+        </tr>
+        <tr>
+            <!-- align attribute can be used to control alignment horizontally: left, center, right -->
+            <td colspan="3" align="center">3-1</td>
+            <!-- <td>3-2</td> -->
+            <!-- <td>3-3</td> -->
+            <td>3-4</td>
+        </tr>
+        <tr>
+            <td>4-1</td>
+            <td>4-2</td>
+            <td>4-3</td>
+            <!-- valign attribute can be used to control alignment vertically: top, middle, bottom -->
+            <td rowspan="2" valign="top">4-4</td>
+        </tr>
+        <tr>
+            <td>5-1</td>
+            <td>5-2</td>
+            <td>5-3</td>
+            <!-- <td>5-4</td> -->
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!-- The link can be used to validate html: https://validator.w3.org/ -->
+<!-- DOCTYPE tag tells brower which html standard to use -->
+<!DOCTYPE html>
+<!-- main content of the html page -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Learning Tags</title>
+        <!-- <base> tag can be used to define some global attribute -->
+        <base target="_blank" />
+    </head>
+    <body>
+        <div>Header Tags Below</div>
+        <h1>Header 1</h1>
+        <!-- Usually there is only one h1 tag in one page -->
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+        <h6>Header 6</h6>
+        <!-- Only 6 header tags, h1 to h6, no more header tags -->
+
+        <div>Paragraph Tags Below</div>
+        <!-- <p> tag: continuous backspace will be compiled to only one space -->
+        <!-- If more than one backspace is needed, use &nbsp; -->
+        <p>SOTI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is a proven leader at creating innovative solutions that reduce the cost and complexity of business-critical mobility and the IoT. Thousands of companies around the world depend on us to secure, manage and support their mobile operations. </p>
+        <p>SOTI’s two decades of success has built strong partnerships with leading mobile platform providers and device manufacturers. These relationships give us unparalleled insight into new technology and industry trends before they happen. </p>
+        <p>SOTI is a proven innovator — clear vision, laser focus and a commitment to R&D has made us the market leader at delivering exciting, new business mobility solutions. SOTI helps businesses take mobility to endless possibilities.</p>
+    
+        <div>Structure Tags Below</div>
+        <!-- <div> tag is used to contain certain places, no actual meaning -->
+        <!-- <span> tag is a inline tag, is used to decorate characters -->
+        <div>Div 1</div>
+        <div>Div 2
+            <div>Div 3 within Div2</div>
+        </div>
+        <span>Span 1</span>
+        <span>Span 2
+            <span>Span 3 within Span 2</span>
+        </span>
+
+        <div>Anchor Tags Below</div>
+        <a href="http://www.cs.toronto.edu/~qizhao/">Qi's personal web page</a>
+        <a href="https://www.soti.net/">SOTI offical web page</a>
+        <a href="https://mscac.utoronto.ca/" target="_self">MScAC description web page</a>
+        <!-- href is the short for hyperlink reference -->
+        <!-- target will set how to open the link, _blank means a new window, _self means current window and its the default value -->
+        <a href="javascript:void(0)">blank link</a>
+        <a href="javascript:;">another way to create blank link</a>
+        <a href="HTML_Chapter2.html">Use relative path to open a link</a>
+
+        <div>Image Tags Below</div>
+        <img src="./Ribery.jpg" alt="Photo of Ribery" width="200" />
+        <img src="./Ribery.jpg" alt="Photo of Ribery" height="300" title="Pic of Ribery" />
+        <!-- alt is used to show alternate name of the image when it's not able to open -->
+        <!-- title is used to show the name of the image when cursor is on the image -->
+
+        <div>List Tags Below</div>
+        <!-- ul: unordered list; li: list item -->
+        <!-- type can be used to define bullet types, circle/square/none -->
+        <ul type="square">
+            <li>first item</li>
+            <li>second item</li>
+            <li>thrid item</li>
+        </ul>
+
+        <!-- ol: ordered list -->
+        <!-- type can be used to define numbering types, 1/A/a/I/i -->
+        <ol type="I">
+            <li>big</li>
+            <li>middle</li>
+            <li>small</li>
+        </ol>
+
+        <!-- dl: defination list; dt: defination list title; dd: defination list data -->
+        <dl>
+            <dt>GAME</dt>
+            <dd>war3</dd> <dd>gta5</dd> <dd>nba2k</dd>
+            <dt>COUNTRY</dt>
+            <dd>Canada</dd> <dd>China</dd> <dd>USA</dd>
+        </dl>
+    </body>
+</html>
