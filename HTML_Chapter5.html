@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tags Learning</title>
+</head>
+<body>
+    <!-- this form is used to learn input tag -->
+    <form action="http://www.cs.toronto.edu/~qizhao/" method="GET">
+        <div>Which game would you like to buy</div>
+        <div>User ID: 
+            <!-- different type of input tag can be used in different situations -->
+            <!-- text - input text ; radio - single selection; checkbox - multiple selection; button - normal button; -->
+            <!-- submit - submit data to database; reset - clear form content; file - upload files -->
+            <input type="text" name="user" />
+        </div>
+        <div>Password: 
+            <input type="password" name="pwd" />
+        </div>
+        <!-- Same selection for a radio/checkbox input needs to have the same "name", but "value" is used to differ them -->
+        <div>Game List:
+            <input type="radio" name="selection" value="gta5" />GTA5
+            <input type="radio" name="selection" value="2k20"/>2K20
+            <!-- use a label could make the whole input text clickable, label tag should target at the input id -->
+            <input type="radio" name="selection" value="rfa" id="ring_fit"><label for="ring_fit">Ring Fit Adventure</label>
+        </div>
+        <div>DLC List:
+            <input type="checkbox" name="dlc" value="d1" /> DLC1
+            <input type="checkbox" name="dlc" value="d2" /> DLC2
+            <input type="checkbox" name="dlc" value="d3" /> DLC3
+        </div>
+        <div>
+            <input type="submit" value="Confirm" />
+            <input type="reset" value="Clear" />
+        </div>
+    </form>
+
+    <!-- this part is used to learn select tag -->
+    <div>Which company is your dream offer?</div>
+    <!-- "size" attribute can be used to show how many selections at a time -->
+    <!-- "multiple" attribute is to let the form have multiple selections -->
+    <select name="company" id="select1" size="4" multiple>
+        <option value="google">Google</option>
+        <option value="apple">Apple</option>
+        <option value="facebook">Facebook</option>
+        <!-- "selected" attribute can be used to show which option is the default one -->
+        <option value="soti" selected>SOTI</option>
+    </select>
+
+    <!-- this part is used to learn textarea tag -->
+    <div>below is a textarea tag sample</div>
+    <textarea name="text_area" id="ta1" cols="30" rows="10"></textarea>
+</body>
+</html>
