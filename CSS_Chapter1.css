@@ -1,0 +1,27 @@
+/* the same style can be applied to a group of tags */
+h3, h4 {
+    color: green;
+    text-align: center;
+    text-shadow: 5px 5px 5px seagreen;
+}
+
+h5 {
+    color: teal;
+    text-align: center;
+    background: thistle;
+
+    color: tomato;
+    /* the latest property is showed if multiple same properties are defined  */
+    color: violet;
+}
+
+/* properties of <p> tag is inherited by span */
+p {
+    text-align: center;
+    color: yellowgreen;
+    font-size: 30px;
+}
+
+span {
+    color: red;
+}
