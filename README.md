@@ -30,7 +30,7 @@ This part is the basic knowledge of CSS
 #### Chapter 1
 This chapter is a brief introduction to CSS
 
-Code directory: [CSS_Chapter1.html]()
+Code directory: [CSS_Chapter1.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter1.html) and [CSS_Chapter1.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter1.css)
 
 ###### There are THREE ways to insert a CSS style sheet into a HTML web page
 > Inline CSS: An inline style is used to apply a unique style for `a single element`
@@ -47,13 +47,61 @@ Code directory: [CSS_Chapter1.html]()
 Selector-1, Selector-2 { Property-1: Value-1; Property-2: Value-2; }
 ```
 > Notes:
->
 > 1. Use ";" to separate different properties
->
 > 2. Use "," to group multiple tags and set them to the same style
 
 > Characteristics:
->
 > 1. Only the latest(code in the bottom) property value is showed if multiple same properties are defined
->
 > 2. Some properties(mostly related to text) of parent tags can be inherited by child tags
+
+#### Chapter 2
+This chapter is a description to CSS Selectors
+
+Code directory: [CSS_Chapter2.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter2.html) and [CSS_Chapter2.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter2.css)
+
+###### Types of CSS Selectors
+
+1. Universal selector (*): used to define styles for all HTML elements on one page
+2. Element selector (**h1**, **div**, **p**, etc): used to define style for a specific HTML element
+3. Id selector (#*id*): used to define style for a element with unique *id* value
+
+> Note: *id* attribute is unique in one HTML page; "id_value" should contain NO spaces and start with a character
+
+4. Class selector (.*class* or **tag**.*class*): used to define styles for a class of elements
+
+> Note: 
+> *class* attribute can be used to cluster several elements into a group or a class. We can also specify certain elements to be affected by a class by using following syntax
+> ```css
+> tag.class {property: value}
+> ```
+
+5. Attribute selector (**tag**[*attribute*], **tag**[*attribute*="value"] or **tag**[*attribute*~="value"], etc): used to define styles for tag(s) with certain attributes
+
+6. Pseudo-classes selector (**tag**:pseudo-class): often comes together with **a** tag to define styles of a link
+
+> Notes:
+> pseudo-classes should contain certain orders to take effect
+> ```css
+> a.link {property: value}
+> a.visited {property: value}
+> a.hover {property: value}
+> a.active {property: value}
+> ```
+
+7. Contextual selector: used when selectors need to match elements that appear in a context
+    * Descendant selector (**ancestor_tag** **descendant_tag**): all descendant tags will have the same style
+    * Child selector (**father_tag** > **child_tag**): only child tags will have the style (grandson tag won't take effect)
+    * Adjacent sibling selector (**sibling_tag_1** + **sibling_tag_2**)
+    
+###### Weights of CSS Selectors
+
+> The HTML page will show the style of the Largest Weights
+>
+> * Universal Selector (*): 0
+> * Element Selector (**tag**): 1 
+> * Class Selector (.class), Pseudo-classes Selector (**tag**:pseudo-class) and Attribute Selector (**tag**[*attribute*]): 10
+> * Id Selector (#*id*): 100
+> * Inline CSS style Selectors: 1000
+> * Selectors with *!important* value: Unlimited
+>
+> Note: Different selectors can be combined to get a larger weight

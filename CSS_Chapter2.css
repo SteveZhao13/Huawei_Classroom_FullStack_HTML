@@ -1,0 +1,84 @@
+/* universal selector (*) selects all HTML elements on the page. */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* element selector */
+h5 {
+    background-color: yellow;
+    color: violet;
+}
+span {
+    color: royalblue;
+}
+
+/* id selector */
+#title {
+    color: teal;
+}
+
+/* class selector */
+.titles {
+    background-color: wheat;
+}
+/* specify certain elements to be affected by a class */
+h2.titles {
+    color: rebeccapurple;
+}
+
+/* attribute selector */
+/* all h4 tags with title attribute */
+h4[title] {
+    color: royalblue;
+}
+/* h4 tag with title attribute the same as 'page last title' */
+h4[title="page last title"] {
+    color: green;
+}
+/* h4 tag with title attribute including 'second' */
+h4[title~="second"] {
+    color: red;
+}
+
+/* pseudo-classes selector */
+/* order of these pseudo-classes should contain several rules */
+a:link {color: red;}
+a:visited {color: blue;}
+a:hover {color: green;}
+a:active {color: pink;}
+
+/* Contextual selector */
+/* Descendant selector */
+div span {
+    color: yellowgreen;
+}
+/* Child selector */
+p > span {
+    color: red;
+}
+/* Adjacent sibling selector */
+span + span {
+    color: saddlebrown;
+}
+
+/* weights of selectors */
+/* 
+Universal selector (*): 0
+Element selector (**tag**): 1 
+Class selector (.class), Pseudo-classes selector (**tag**:pseudo-class) and Attribute selector (**tag**[*attribute*]): 10
+Id selector (#*id*): 100
+Inline CSS style selectors: 1000
+Selectors with *!important* value: Unlimited
+*/
+#paragrath {
+    color: grey !important;
+    color: steelblue;
+}
+/* Different selectors can be combined to get a larger weights  */
+#paragrath_2 {
+    color: red;
+}
+p#paragrath_2 {
+    color: green; /*will be selected*/
+}
