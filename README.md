@@ -3,16 +3,16 @@ This repository is code base for learning web front end knowledge in the Huawei 
 
 Some format notes:
 
-* All **tags** will be **Bold**
+* All **tags**/**elements** will be **Bold**
 * All tag *attributes* will be *Italic*
 * All attribute "values" will be "quoted"
 
 ## Content - HTML
 This part is the basic knowledge of HTML, specific the usage of HTML tags
-#### Chapter 2
+### Chapter 2
 
 
-#### Chapter 5
+### Chapter 5
 This chapter is to learn the **form** tag
 
 Code directory: [HTML_Chapter5.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/HTML_Chapter5.html)
@@ -27,12 +27,12 @@ Code directory: [HTML_Chapter5.html](https://github.com/SteveZhao13/Huawei_Class
 ## Content - CSS
 This part is the basic knowledge of CSS
 
-#### Chapter 1
+### Chapter 1
 This chapter is a brief introduction to CSS
 
 Code directory: [CSS_Chapter1.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter1.html) and [CSS_Chapter1.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter1.css)
 
-###### There are THREE ways to insert a CSS style sheet into a HTML web page
+##### There are THREE ways to insert a CSS style sheet into a HTML web page
 > Inline CSS: An inline style is used to apply a unique style for `a single element`
 > * How to use: add the *style* attribute to the relevant element
 >
@@ -42,7 +42,7 @@ Code directory: [CSS_Chapter1.html](https://github.com/SteveZhao13/Huawei_Classr
 > External CSS: An external style sheet is used to change the look of `an entire website`
 >    * How to use: add a reference to the external style sheet file inside the **link** tag, inside the **head** section
 
-###### CSS Syntax
+##### CSS Syntax
 ```css
 Selector-1, Selector-2 { Property-1: Value-1; Property-2: Value-2; }
 ```
@@ -54,12 +54,12 @@ Selector-1, Selector-2 { Property-1: Value-1; Property-2: Value-2; }
 > 1. Only the latest(code in the bottom) property value is showed if multiple same properties are defined
 > 2. Some properties(mostly related to text) of parent tags can be inherited by child tags
 
-#### Chapter 2
+### Chapter 2
 This chapter is a description to CSS Selectors
 
 Code directory: [CSS_Chapter2.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter2.html) and [CSS_Chapter2.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter2.css)
 
-###### Types of CSS Selectors
+##### Types of CSS Selectors
 
 1. Universal selector (*): used to define styles for all HTML elements on one page
 2. Element selector (**h1**, **div**, **p**, etc): used to define style for a specific HTML element
@@ -93,7 +93,7 @@ Code directory: [CSS_Chapter2.html](https://github.com/SteveZhao13/Huawei_Classr
     * Child selector (**father_tag** > **child_tag**): only child tags will have the style (grandson tag won't take effect)
     * Adjacent sibling selector (**sibling_tag_1** + **sibling_tag_2**)
     
-###### Weights of CSS Selectors
+##### Weights of CSS Selectors
 
 > The HTML page will show the style of the Largest Weights
 >
@@ -106,12 +106,12 @@ Code directory: [CSS_Chapter2.html](https://github.com/SteveZhao13/Huawei_Classr
 >
 > **Note:** Different selectors can be combined to get a larger weight
 
-#### Chapter 3
+### Chapter 3
 This chapter is to learn common used CSS Attributes
 
 Code directory: [CSS_Chapter3.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter3.html) and [CSS_Chapter3.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter3.css)
 
-###### Font
+##### Font
 1. *font-family*: which kind of fonts will be used (e.g. "serif", "monospace")
 2. *font-size*: how big the font is (e.g. "30px", "50%")
 3. *font-style*: how the font will be italic (e.g. "italic", "normal")
@@ -122,11 +122,11 @@ Code directory: [CSS_Chapter3.html](https://github.com/SteveZhao13/Huawei_Classr
 > p {font: italic bolder 30px serif;}
 > ```
 
-###### Text
+##### Text
 1. *color*: used to change text color (e.g. "red", "#ff0000", "rgb(155,0,0)")
 2. *line-height*: used to change how high a line is (e.g. "50px")
 3. *text-align*: used to set align type of text (e.g. "center", "right")
-4. *directory*: used to set text directory (e.g. "rtl", "ltr")
+4. *direction*: used to set text direction (e.g. "rtl", "ltr")
 5. *text-indent*: used to set indent at the beginning of text (e.g. "50px", "2em")
 6. *text-decoration*: used to add a decoration line above/below/through the text (e.g. "line-through", "underline")
 7. *letter-spacing*: used to set spacing between characters (e.g. "10px", "-3px")
@@ -137,21 +137,21 @@ Code directory: [CSS_Chapter3.html](https://github.com/SteveZhao13/Huawei_Classr
 > p {text-shadow: x-offset y-offset blur radius color;}
 > ``` 
 
-###### Size
+##### Size
 1. *height*/*width*: set height or width of a part of the window (e.g. "20px")
 2. *min-height*/*min-width*: set the minimum height or width of a part of the window (e.g. "10px")
 3. *max-height*/*max-width*: set the maximum height or width of a part of the window (e.g. "50px")
 
 > **Note:** if *height*/*width* > *max-height*/*max-width* or *height*/*width* < *min-height*/*min-width*, it will use the boundary values of *max-height*/*max-width* or *min-height*/*min-width*
 
-###### List
+##### List
 1. *list-style-type*: set icon shape of the list (e.g. "circle", "square", "decimal")
 2. *list-style-image*: set a image as the list icon (e.g. "url(icon.png)")
 3. *list-style-position*: set the position of the list icon (e.g. "inside", "outside")
 
 > **Note:** *list-style-type* and *list-style-image* attributes cannot be showed at the same time. However, in a real HTML project, these two attributes are often written at the same time. Because some web browsers don't support *list-style-image* attribute, we will use *list-style-type* as a backup plan
 
-###### Background
+##### Background
 1. *background-color*: set a background color (e.g. "red", "#ff0000", "rgb(255,0,0)")
 2. *background-image*: set a image as background (e.g. "url(bg.png)")
 3. *background-repeat*: control how the image repeats if the background window is larger than the image (e.g. "no-repeat", "repeat-x", "repeat-y")
@@ -164,3 +164,78 @@ Code directory: [CSS_Chapter3.html](https://github.com/SteveZhao13/Huawei_Classr
 > "x-offset" can be set to: left, center, right/10px/20%; "y-offset" can be set to: top, center, bottom/20px/50%
 
 5. *background-attachment*: set if the background image will be fixed or scrolled with the page (e.g. "fixed", "scroll")
+
+### Chapter 4
+This chapter is to learn Box Model of CSS
+
+CSS Box Model consists of 4 parts: Content (内容), Padding(内边距), Border(边框) and Margin(外边距)
+
+```css
+div { padding: 30px; border: 1px solid red; margin: 40px; }
+```
+
+![CSS Box Model Default](box_model_default.png)
+![CSS Box Model after Decoration](box_model.png)
+
+Code directory: [CSS_Chapter4.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter4.html) and [CSS_Chapter4.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter4.css)
+
+##### Padding
+
+*padding-top*/*padding-bottom*/*padding-left*/*padding-right*: used to set the padding values for different directions (e.g. "10px")
+
+> **Note_1:** we can use *padding* attribute to combine the above four attributes, syntax is like below. The order matters (clock-rise from top).
+> ```css
+> div { padding: 10px 20px 30px 40px; } /* order: top right bottom left */
+> ```
+
+> **Note_2:** if we want to ignore some of the four values, the values will represent the following padding values:
+> ```css
+> div { padding: 10px; } /* all 4 directions have the same padding value of 10px */
+> div { padding: 10px 20px; } /* top/bottom:10px right/left:20px */
+> div { padding: 10px 20px 30px; } /* top:10px right/left:20px bottom:30px */
+> ```
+
+##### Border
+1. *border-style*: set the border style (e.g. "solid", "dashed", "dotted", "double")
+2. *border-width*: set the width of border (e.g. "thick", "thin", "2px")
+3. *border-color*: set the color of border (e.g. "red", "#ff0000", "rgb(255,0,0)")
+
+> **Note:** we can use *border* attribute to set the style/width/color of border at the same time, and width/color can be ignored
+> ```css
+> div { border: solid 2px red; }
+> ```
+
+4. *border-top*/*border-right*/*border-bottom*/*border-left*: set the style/width/color of a border part separately (e.g. "dashed 1px red")
+
+##### Margin
+*margin-top*/*margin-bottom*/*margin-left*/*margin-right*: used to set the value of margin for different directions (e.g. "10px", "auto")
+
+> **Note_1:** we can use *margin* attribute to combine the above four attributes. The order will be the same as how *padding*  attribute acts
+
+> **Note_2:** "auto" value of *margin* attribute will set the maximum possible value of the certain direction. So if both *margin-right* and *margin-left* are set to "auto", the box will be in the center of the window part
+
+> **Tips and Testing Points**
+>
+> <u>Question:</u> If two adjacent `block elements` both set *margin* attribute values "margin-1" and "margin-2", what will be the actual distance between these two elements?
+>
+> <u>Answer:</u> <b><i>max("margin-1", "margin-2")</i></b>
+>
+> <u>Question:</u> If two adjacent `inline elements` both set *margin* attribute values "margin-1" and "margin-2", what will be the actual distance between them?
+>
+> <u>Answer:</u> <b><i>"margin-1"+"margin-2"</i></b>
+
+##### Display
+*display* attribute is used to control how the element will show in the page (e.g. "inline", "block", "inline-block", "none")
+* "inline": will set any element show as a inline element
+* "block": will set any element show as a block element
+* "inline-block": will set any element show as a inline-block element
+* "none": will hide the element
+
+> **Note:** `inline-block` element will have attributes of both inline element and block element. For example, it won't occupy the entire space and start on new line which is like inline elements. However, it will have width and height attributes just like block elements
+
+
+> **Tips and Testing Points**
+>
+> <u>Question:</u> How to make two `inline elements` tightly adjacent without any gaps
+>
+> <u>Answer:</u> Two ways. One is to write them together <b><i>without Line Breaks and Spacing</i></b>. The other is to set a global *font-size*="0px"
