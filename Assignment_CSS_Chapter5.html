@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双飞翼布局</title>
+    <style>
+        .container {
+            border: solid 1px black;
+            width: 1000px;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+
+        .center {
+            float: left;
+            background-color: yellow;
+            width: 100%;
+        }
+
+        .left {
+            float: left;
+            background-color: green;
+            width: 200px;
+            margin-left: -100%;
+        }
+
+        .right {
+            float: left;
+            background-color: pink;
+            width: 200px;
+            margin-left: -200px;
+        }
+
+        .content {
+            margin: 0px 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>这个网页实现了一个三列布局</h1>
+    <h2>特点：左右两侧宽度固定， 中间内容区域自适应</h2>
+    <h3>步骤：1. float属性让左中右元素都浮动；2.使用负margin属性让三元素保持同一水平；3.中间列加一个div元素并设置其中margin值为左右两元素的宽度；4.清除父元素浮动</h3>
+    <h3>优点：1.中间元素宽度自适应；2.中间元素先加载；3.浮动布局；4.巧妙使用负margin属性；5.浏览器兼容性好</h3>
+    <div class="container">
+        <div class="center">
+            <div class="content">center content</div>
+        </div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>

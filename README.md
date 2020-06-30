@@ -214,7 +214,7 @@ Code directory: [CSS_Chapter4.html](https://github.com/SteveZhao13/Huawei_Classr
 
 > **Note_2:** "auto" value of *margin* attribute will set the maximum possible value of the certain direction. So if both *margin-right* and *margin-left* are set to "auto", the box will be in the center of the window part
 
-> **Tips and Testing Points**
+> **Tips and Testing Points 面试试题**
 >
 > <u>Question:</u> If two adjacent `block elements` both set *margin* attribute values "margin-1" and "margin-2", what will be the actual distance between these two elements?
 >
@@ -234,8 +234,66 @@ Code directory: [CSS_Chapter4.html](https://github.com/SteveZhao13/Huawei_Classr
 > **Note:** `inline-block` element will have attributes of both inline element and block element. For example, it won't occupy the entire space and start on new line which is like inline elements. However, it will have width and height attributes just like block elements
 
 
-> **Tips and Testing Points**
+> **Tips and Testing Points 面试试题**
 >
 > <u>Question:</u> How to make two `inline elements` tightly adjacent without any gaps
 >
 > <u>Answer:</u> Two ways. One is to write them together <b><i>without Line Breaks and Spacing</i></b>. The other is to set a global *font-size*="0px"
+
+### Chapter 5
+This chapter is to learn CSS *float* Attribute
+
+Code directory: [CSS_Chapter5.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter5.html) and [CSS_Chapter5.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter5.css)
+
+[A web page layout](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/Assignment_CSS_Chapter5.html) to show three elements in the same level, and the width of the middle element will adjust automatically according to its parent element
+
+##### Float
+*float* attribute is used to change the position of a certain element, property values could be "none", "left" or "right"
+
+> **Note:** once *float* attribute is used, then the element will have the following features:
+>
+> 1. Any element with *float* attribute will become a `block element`, no matter what it is before
+>
+> 2. Elements with *float* attribute will cause its parent element to collapse (height of parent element would literally become 0) if the parent element only contains float elements. Below is a example of parent element collapsing
+> <img src="float_collapse.png" width="350" alt="collapse caused by floating">
+
+##### Clear
+*clear* attribute is used to clear float, this will save its parent element from collapsing, property values could be "none", "left", "right" or "both"
+
+> **Note:** *clear* attribute should be used by a `block element` after the element with *float* attribute
+
+##### Overflow
+*overflow* attribute is used to control what happens to content that is too big to fit into an area, property values could be "visible", "hidden", "scroll" or "auto". Meanings of those values are as following
+
+* "visible": default value, the overflow is not clipped and the content renders outside the element's box
+* "hidden": the overflow is clipped and the rest of the content will be invisible
+* "scroll": the overflow is clipped and a scrollbar is added to see the rest of the content
+* "auto":sSimilar to scroll, but it adds scrollbars only when necessary
+
+> **Note:** *overflow* attribute can also be used to clear float and save the parent element from collapsing. To do so, we should add *overflow* attribute into the parent element with "hidden" value
+
+> **Tips and Testing Points 面试试题**
+>
+> <u>Question:</u> How to `avoid collapsing` when using *float* attribute
+>
+> <u>Answer:</u> Many ways. First is to set *height* attribute value to the parent element (not very good and has constrains). The second way is to use *clear* attribute to a block element after the element with *float* attribute. The third way is to set *overflow* attribute to the parent element with "hidden" value
+>
+> <u>Best Answer:</u> Use `clearfix hack` (which is used by most webpages). Just add "clearfix" as a class name into the parent element
+>
+> ```html
+> <div class="parent-element-name clearfix"><div>
+> ```
+>
+> ```css
+> /* below code snippet can be encapsulated and used in any webpage */
+> .clearfix:after {
+>     /* attributes that must exist */
+>     content: "";
+>     clear: both;
+>     display: block;
+>     /* attributes that are optional, just to make sure it's not showing */
+>     height: 0px;
+>     font-size: 0px;
+>     visibility: hidden;
+> }
+

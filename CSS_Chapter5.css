@@ -1,0 +1,64 @@
+.box {
+    border: solid 1px black;
+    width: 500px;
+    /* overflow can be used to clear float of the child elements */
+    overflow: hidden;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+
+    float: left;
+    /* float: right; */
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    float: right;
+}
+
+/* .clear {
+    clear: both;
+} */
+
+.box_2 {
+    border: solid 1px black;
+    width: 150px;
+    height: 60px;
+    overflow: auto;
+}
+
+/* can be used anywhere to clear float */
+.clearfix:after {
+    /* attributes that must exist */
+    content: "";
+    clear: both;
+    display: block;
+    /* attributes that are optional, just to make sure it's not showing */
+    height: 0px;
+    font-size: 0px;
+    visibility: hidden;
+}
+
+.parent_element {
+    border: solid 1px black;
+}
+
+.float_left {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    float: left;
+}
+
+
+.float_right {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    float: right;
+}
