@@ -297,3 +297,36 @@ Code directory: [CSS_Chapter5.html](https://github.com/SteveZhao13/Huawei_Classr
 >     visibility: hidden;
 > }
 
+### Chapter 6
+This chapter is to learn CSS *position* Attribute
+
+Code directory: [CSS_Chapter6.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter6.html) and [CSS_Chapter6.css](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/CSS_Chapter6.css)
+
+##### Position
+*position* attribute specifies the type of positioning method used for an element, property values could be "static"(default), "relative", "absolute" or "fixed". Meanings of those values are as following
+
+* "static": default value, the element is always positioned according to the normal flow of the page by default, element will not be affected by "top", "bottom", "left" and "right" attributes
+
+> **Note:** *top*, *bottom*, *left* and *right* attributes are used to control the position of an element. They are used together with *position* attribute of value "relative", "absolute" or "fixed". For example, *top* means how many pixels the element will be away from the top edge of its nearest ancestor(could be the whole web page, or its parent element)
+
+* "fixed": the element will always stay in the same place of the browser window even if the page is scrolled, use *top*, *bottom*, *left* and *right* attributes to control the fixed position
+* "absolute": the element will be stay in a position that is relative to the nearest positioned ancestor. However, if the element has no positioned ancestors, it will move along with the web page scrolling
+
+> **Note:** elements with "fixed" or "absolute" *position* value will escape from the web page's normal workflow as a standalone element
+
+> **Note:** elements with "absolute" *position* will be relative to its ancestor `only if its ancestor has position attribute`
+
+* "relative": the element position will be adjusted away from its normal position, use *top*, *bottom*, *left* and *right* attributes to control how far the element will be away from its normal position
+
+> **Note:** we can use *z-index* attribute to control the stack order of a positioned  element, an element with a greater *z-index* value will always show the the top. It only works on elements with *position* attribute
+
+> **Tips and Testing Points 面试试题**
+>
+> <u>Question:</u> How to position an element relative to its ancestor element
+>
+> <u>Answer:</u> Use "relative" *position* value on the parent element and "absolute" *position* value on the child element, see the example below:
+>
+> ```css
+> .parent { position: relative; height: 300px; background-color: yellow; }
+> .child { position: absolute; top: 10px; left: 10px; }
+> ```

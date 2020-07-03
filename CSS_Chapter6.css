@@ -1,0 +1,42 @@
+/* fixed positioning will make the element stay the same position even if the page is scrolled */
+.pos_fixed {
+    position: fixed;
+    background-color: yellow;
+    height: 100px;
+    left: 200px;
+    top: 300px;
+}
+
+/* relative positioning will change the element postion according to its normal position.*/
+.pos_relative {
+    position: relative;
+    left: 20px;
+    background-color: green;
+    height: 100px;
+    width: 100px;
+}
+
+/* absolute positioning will set the position of an element relative to its parent element */
+.pos_absolute {
+    position: absolute;
+    top: 50px;
+    background-color: blue;
+    height: 100px;
+}
+
+.parent {
+    position: relative;
+    left: 10px;
+    height: 300px;
+    background-color: yellowgreen;
+}
+
+.child {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 100px;
+    background-color: rebeccapurple;
+    width: 100px;
+}
+
