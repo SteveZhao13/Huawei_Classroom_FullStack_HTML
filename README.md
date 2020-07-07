@@ -4,25 +4,103 @@ This repository is code base for learning web front end knowledge in the Huawei 
 Some format notes:
 
 * All **tags**/**elements** will be **Bold**
-* All tag *attributes* will be *Italic*
+* All element *attributes* will be *Italic*
 * All attribute "values" will be "quoted"
 
 ## Content - HTML
-This part is the basic knowledge of HTML, specific the usage of HTML tags
-### Chapter 2
+This part is the basic knowledge of HTML, specific the usage of HTML elements
 
+### Chapter 1
+Intro to HTML
+
+### Chapter 2
+This chapter is a brief intro to HTML elements
+
+* Double-tag element: an element with both start tag and end tag, examples are shown below:
+```html
+<div>content of div element</div>
+<p>content of p element</p>
+<h1>content of h1 element</h1>
+```
+
+* Single-tag element: an element with only start tag, examples are shown below:
+```html
+<img src="photo.png" alt="image" />
+<input type="text" />
+```
+
+* Empty element: an element with no content, for example `<br>` is a empty element which defines a line break
+
+> **Note:** the strict syntax of single-tag element needs to end with "/" mark, however, it's ok to omit the end mark "/"
+
+### Chapter 3
+This chapter is to learn some common used elements
+
+Code directory: [HTML_Chapter3.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/HTML_Chapter3.html) and [A simple HTML page with to leverage different elements](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/Assignment_HTML_Chapter3.html)
+
+* Header elements
+    * `<h1>` to `<h6>`
+    * usually there are only one `<h1>` tag in a HTML web page
+* Paragraph element
+    * `<p>` tag is to define a paragraph, it's a `block element`
+    * continuous backspace with `<p>` tag will be compiled to only one space, so if more than one backspace is needed, use `&nbsp;`
+    * content inside `<p>` tag will have line breaks automatically according to the web page size
+* Structure elements
+    * `<div>` and `<span>`
+    * `<div>` tag is used to request a certain place, and it's a `block element`
+    * `<span>` tag is used to decorate characters inside it, and it's a `inline element`
+    * both `<div>` and `<span>` tags can be used recursively (nested)
+* Anchor elements
+    * `<a>` tag defines a hyperlink, which is used to link from one page to another
+    * attribute *href* is very important, it's the short for "hyperlink reference" and it indicates the link's destination 
+    * attribute *target* will set how to open the link, "_blank" means to open a new window, "_self" means to continue using the current window
+    * links could be a relative path or a absolute path
+    * there are several ways to open a black page, see the code below:
+    ```html
+    <a href="javascript:void(0)">blank link</a>
+    <a href="javascript:;">another way to open a blank link</a>
+    ```
+* Image element
+    * `<img>` tag defines a image in a web page
+    * attribute *alt* is used to show alternate name of the image when the image is not able to show. It's often ignored but it's important to keep the web page clear and consistent to varies of environment
+    * attribute *title* is used to show the name of the image when cursor is on the image
+    * use *width* and *height* attributes to control the size of the image
+* List elements
+    * `<ul>` is unordered list, and `<ol>` is ordered list, `<li>` is the list item inside both tags
+    * `<dl>` is definition list, use `<dt>` as the definition list title and `<dd>` as the definition list data content 
+    * for `<ul>` and `<ol>` tags, there are some pre-defined *type* attribute to show different types of list icon. For example, "circle"/"square"/"none" for `<ul>` tag; "1"/"A"/"a"/"I"/"i" for `<ol>` tag
+* Other elements
+    * `<base>` tag can be used to define some global attributes, it's used inside `<head>` section of the html page
+    * `<!DOCTYPE>` tag tells browser which html standard to use
+
+### Chapter 4
+This chapter is to learn elements that is to create a HTML table
+
+Code directory: [HTML_Chapter4.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/HTML_Chapter4.html)
+
+* `<table>` tag defines an HTML table, use *border*, *width* and *height* attributes to set its size and border lines
+* all the following elements should be included inside the `<table>` tag
+    * `<tr>` is short for table row, `<td>` is short for tale data, and `<th>` is short for table header
+    * `<caption>` is used to set a title for the table, it must be inserted immediately after the `<table>` tag
+    * `<thead>`, `<tbody>` and `<tfoot>` are used to group content for different table parts, they have no actual meanings and will not affect the table
+    * `<colgroup>` tag specifies a group of table columns for formatting, use `<col>` tags inside it to set column properties for each column
+* below are some useful attributes to control a HTML table
+    * *cellspacing* is to control the distance between two cells, and *cellpadding* is to control the distance within one cell
+    * *align* can be used at **table**, **tr** or **td** tags to control alignment horizontally (e.g. "left", "center" or "right"); *valign* can be used to control alignment vertically (e.g. "top", "middle" or "bottom")
+    * *span* attribute is used inside `<colgroup>` tag, and it can define how many columns will be controlled, for example, *span*=3 means to control 3 columns within the group of columns
+    * *colspan* and *rowspan* attributes can be used to combine several cells
 
 ### Chapter 5
-This chapter is to learn the **form** tag
+This chapter is to learn the `<form>` element
 
 Code directory: [HTML_Chapter5.html](https://github.com/SteveZhao13/Huawei_Classroom_WebFrontEnd/blob/master/HTML_Chapter5.html)
 
-* **form** tag has a *action* attribute and a *method* attribute. *action* is to show where the data of the from goes; *action* is the way to deliver data
-* all the following tags should be included in the **form** tag
-    * **input** tag can be used in various places, use *type* attribute to differ different usage: "text" - input text ; "radio" - single selection; "checkbox" - multiple selection; "button" - normal button; "submit" - submit data to database; "reset" - clear form content; "file" - upload files
-    * **input** tag should have the same *name* attribute value for the same amount of selections, e.g. if there are 5 choices of *radio* type of **input** tags, all the **input** tags should have the same *name*; However, the *value* attribute should be different for each tag, because it's used to differ choices for the back-end database
-    * **select** tag is used to make scroll-down menu, it should be used along with **option** tags. *selected* attribute is used to change the default option
-    * **textarea** tag is used to create a multi-line text input area. Using *cols* and *rows* attributes can control the size of the area
+* `<form>` tag has a *action* attribute and a *method* attribute. *action* is to show where the data of the from goes; *action* is the way to deliver data
+* all the following elements should be included inside the `<form>` tag
+    * `<input>` tag can be used in various places, use *type* attribute to differ different usage: "text" - input text ; "radio" - single selection; "checkbox" - multiple selection; "button" - normal button; "submit" - submit data to database; "reset" - clear form content; "file" - upload files
+    * `<input>` tag should have the same *name* attribute value for the same amount of selections, e.g. if there are 5 choices of *radio* type of `<input>` elements, all the `<input>` elements should have the same *name*; However, the *value* attribute should be different for each element, because it's used to differ choices for the back-end database
+    * `<select>` tag is used to make scroll-down menu, it should be used along with `<option>` tag. *selected* attribute is used to change the default option
+    * `<textarea>` tag is used to create a multi-line text input area. Using *cols* and *rows* attributes can control the size of the area
 
 ## Content - CSS
 This part is the basic knowledge of CSS
@@ -37,10 +115,10 @@ Code directory: [CSS_Chapter1.html](https://github.com/SteveZhao13/Huawei_Classr
 > * How to use: add the *style* attribute to the relevant element
 >
 > Internal CSS: An internal style is used to apply a unique style for `a single HTML page`
-> * How to use: define the style inside the **style** tag, inside the **head** section
+> * How to use: define the style inside the **style** element, inside the **head** section
 >
 > External CSS: An external style sheet is used to change the look of `an entire website`
->    * How to use: add a reference to the external style sheet file inside the **link** tag, inside the **head** section
+>    * How to use: add a reference to the external style sheet file inside the **link** element, inside the **head** section
 
 ##### CSS Syntax
 ```css
@@ -48,11 +126,11 @@ Selector-1, Selector-2 { Property-1: Value-1; Property-2: Value-2; }
 ```
 > **Notes:**
 > 1. Use ";" to separate different properties
-> 2. Use "," to group multiple tags and set them to the same style
+> 2. Use "," to group multiple elements and set them to the same style
 
 > Characteristics:
 > 1. Only the latest(code in the bottom) property value is showed if multiple same properties are defined
-> 2. Some properties(mostly related to text) of parent tags can be inherited by child tags
+> 2. Some properties(mostly related to text) of parent elements can be inherited by child elements
 
 ### Chapter 2
 This chapter is a description to CSS Selectors
@@ -75,9 +153,9 @@ Code directory: [CSS_Chapter2.html](https://github.com/SteveZhao13/Huawei_Classr
 > tag.class {property: value}
 > ```
 
-5. Attribute selector (**tag**[*attribute*], **tag**[*attribute*="value"] or **tag**[*attribute*~="value"], etc): used to define styles for tag(s) with certain attributes
+5. Attribute selector (**tag**[*attribute*], **tag**[*attribute*="value"] or **tag**[*attribute*~="value"], etc): used to define styles for element(s) with certain attributes
 
-6. Pseudo-classes selector (**tag**:pseudo-class): often comes together with **a** tag to define styles of a link
+6. Pseudo-classes selector (**tag**:pseudo-class): often comes together with **a** element to define styles of a link
 
 > **Notes:**
 > pseudo-classes should contain certain orders to take effect
@@ -89,8 +167,8 @@ Code directory: [CSS_Chapter2.html](https://github.com/SteveZhao13/Huawei_Classr
 > ```
 
 7. Contextual selector: used when selectors need to match elements that appear in a context
-    * Descendant selector (**ancestor_tag** **descendant_tag**): all descendant tags will have the same style
-    * Child selector (**father_tag** > **child_tag**): only child tags will have the style (grandson tag won't take effect)
+    * Descendant selector (**ancestor_tag** **descendant_tag**): all descendant elements will have the same style
+    * Child selector (**father_tag** > **child_tag**): only child elements will have the style (grandson element won't take effect)
     * Adjacent sibling selector (**sibling_tag_1** + **sibling_tag_2**)
     
 ##### Weights of CSS Selectors
