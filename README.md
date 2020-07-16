@@ -1,4 +1,4 @@
-# Huawei_Classroom_WebFrontEnd
+# Huawei_Classroom_FullStack_HTML
 This repository is code base for learning web front end knowledge in the Huawei Classroom
 
 Some format notes:
